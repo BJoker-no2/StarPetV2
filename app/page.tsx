@@ -7,10 +7,12 @@ import { ShootingStars } from "@/components/shooting-stars"
 import { CursorTrail } from "@/components/cursor-trail"
 import { MusicToggle } from "@/components/music-toggle"
 import { StarField } from "@/components/star-field"
+import { TopNav } from "@/components/top-nav"
 
 export default function Home() {
   return (
     <main className="relative min-h-screen overflow-x-hidden bg-background">
+      <TopNav />
       {/* Global effects layer */}
       <StarField />
       <ShootingStars />
