@@ -181,7 +181,15 @@ function InteractionPanel() {
         </div>
 
         <div className="mt-4 grid grid-cols-2 gap-3">
-          <button type="button" className="login-social" aria-label="使用 Google 登录">
+          <button
+            type="button"
+            className="login-social"
+            aria-label="使用 Google 登录"
+            onClick={() => {
+              // Server-side OAuth start (sets/refreshes cookies on callback).
+              window.location.href = "/auth/signin?provider=google&next=/"
+            }}
+          >
             <GoogleMark className="w-5 h-5" />
             <span className="text-sm text-sunset-warm/90">{"Google"}</span>
           </button>
